@@ -1,7 +1,9 @@
 import { ArrowRight, MapPin, Shield } from 'lucide-react';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const HomePage: React.FC = () => {
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-[#FAFAFA] text-[#0A192F] font-sans selection:bg-[#1E3A8A] selection:text-white flex flex-col justify-between">
@@ -28,11 +30,13 @@ export const HomePage: React.FC = () => {
               About
             </a>
             <button
+              onClick={() => navigate('/login')}
               className="text-sm font-medium text-slate-700 hover:text-[#0A192F] transition-colors"
             >
               Authority Login
             </button>
             <button
+              onClick={() => navigate('/signup')}
               className="text-sm font-medium bg-[#0A192F] text-white px-4 py-2.5 rounded-md hover:bg-slate-800 transition-all shadow-sm"
             >
               Authority Sign Up
@@ -69,12 +73,14 @@ export const HomePage: React.FC = () => {
             {/* Call To Actions */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
               <button
+                onClick={() => navigate('/login')}
                 className="inline-flex items-center justify-center px-6 py-3.5 bg-[#0A192F] text-white font-medium text-sm rounded-md hover:bg-slate-800 transition-all shadow-sm"
               >
                 AUTHORITY LOGIN
               </button>
 
               <button
+                onClick={() => navigate('/signup')}
                 className="inline-flex items-center justify-center px-6 py-3.5 bg-white border border-slate-300 text-slate-800 font-medium text-sm rounded-md hover:bg-slate-50 transition-all shadow-2xs"
               >
                 <span>GET STARTED</span>

@@ -8,9 +8,11 @@ import {
   ArrowRight,
   Cpu,
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 
 export const AboutPage: React.FC = () => {
+    const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-[#FAFAFA] text-[#0A192F] font-sans selection:bg-[#1E3A8A] selection:text-white flex flex-col justify-between">
       
@@ -35,11 +37,13 @@ export const AboutPage: React.FC = () => {
               About
             </a>
             <button
+              onClick={() => navigate('/login')}
               className="text-sm font-medium text-slate-700 hover:text-[#0A192F] transition-colors"
             >
               Authority Login
             </button>
             <button
+              onClick={() => navigate('/signup')}
               className="text-sm font-medium bg-[#0A192F] text-white px-4 py-2.5 rounded-md hover:bg-slate-800 transition-all shadow-sm"
             >
               Authority Sign Up
