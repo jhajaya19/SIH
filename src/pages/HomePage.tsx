@@ -98,7 +98,7 @@ export const HomePage: React.FC = () => {
               <div 
                 className="absolute inset-0 opacity-20 pointer-events-none"
                 style={{
-                  backgroundImage: `radial-gradient(#94a3b8 1px, transparent 1px)`,
+                  backgroundImage: "radial-gradient(circle at 30% 20%, transparent 0, #a3b8...)",
                   backgroundSize: '24px 24px'
                 }}
               />
