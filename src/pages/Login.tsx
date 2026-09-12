@@ -63,7 +63,7 @@ export default function Login() {
           </Link>
 
           {/* NAVIGATION */}
-          <nav className="hidden items-center gap-7 text-sm font-semibold text-[#5F6B7A] sm:flex">
+          {/* <nav className="hidden items-center gap-7 text-sm font-semibold text-[#5F6B7A] sm:flex">
 
             <Link
               to="/login"
@@ -78,6 +78,26 @@ export default function Login() {
             >
               Authority Sign Up
             </Link>
+          </nav> */}
+          <nav className="flex items-center space-x-8">
+            <a href="/home" className="text-sm font-medium text-slate-600 hover:text-[#0A192F] transition-colors">
+              Home
+            </a>
+            <a href="/about" className="text-sm font-medium text-slate-600 hover:text-[#0A192F] transition-colors">
+              About
+            </a>
+            <button
+              onClick={() => navigate('/login')}
+              className="text-sm font-medium text-slate-700 hover:text-[#0A192F] transition-colors"
+            >
+              Authority Login
+            </button>
+            <button
+              onClick={() => navigate('/signup')}
+              className="text-sm font-medium bg-[#0A192F] text-white px-4 py-2.5 rounded-md hover:bg-slate-800 transition-all shadow-sm"
+            >
+              Authority Sign Up
+            </button>
           </nav>
         </div>
       </header>
